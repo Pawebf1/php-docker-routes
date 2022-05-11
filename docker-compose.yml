@@ -1,12 +1,6 @@
 version: '3.8'
 
 services:
-  composer_install:
-    image: composer
-    volumes:
-      - ./:/app
-    command: sh -c "composer install --ignore-platform-reqs"
-
   php:
     build:
       context: bin/php8
