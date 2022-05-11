@@ -15,7 +15,8 @@ class Routes
                 ->post('/upload', [Controllers\HomeController::class, 'upload'])
                 ->get('/invoices', [Controllers\InvoicesController::class, 'index'])
                 ->get('/invoices/create', [Controllers\InvoicesController::class, 'create'])
-                ->post('/invoices/create', [Controllers\InvoicesController::class, 'store']);
+                ->post('/invoices/create', [Controllers\InvoicesController::class, 'store'])
+                ->get('/cos', [Controllers\HomeController::class, 'cos']);
 
             echo $router->resolve($_SERVER['REQUEST_URI'], strtolower($_SERVER['REQUEST_METHOD']));
 
